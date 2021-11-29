@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<link rel="stylesheet" href="style.css">
+<html>
+   <head>
+   </head>
+   <body>
+      <div class="container">
+         <div class="item">
+            <h2 class="title"><a href="index.html">Hem</a></h2>
+         </div>
+         <div class="item">
+            <h2 class="title"><a href="products.html">Produkter</a></h2>
+         </div>
+         <div class="selecteditem">
+            <h2 class="title"><a href="contacts.html">Kontakt</a></h2>
+         </div>
+         <div class="item">
+            <h2 class="title"><a href="about.html">Om oss</a></h2>
+         </div>
+         <div class="item">
+            <h2 class="title"><a href="documentation.html">Dokumentation</a></h2>
+         </div>
+         <div>
+            <img id="cartimg" style="width:30%;" src="cart.png"><br>
+            <div id="cart">
+            </div>
+         </div>
+      </div>
+      <div class="my-container">
+         <br><br>
+         <form>
+            <select class="selectimage" name="selectinfo" id="selectinfo" onchange="document.getElementById('contactinfo').innerHTML = document.getElementById('selectinfo').value;">
+               <option value="Robert<br>Malmgatan 13 <br>426 77  Västra Frölunda <br>Robert@gmail.com">Robert</option>
+               <option value="Dave<br>Storgatan 44 <br>413 28  Göteborg <br>Dave@gmail.com">Dave</option>
+               <option value="Larry<br>Kungsgatan 5<br>419 12  Göteborg <br>Larry@gmail.com">Larry</option>
+            </select>
+         </form>
+         <br>
+         <div id="contactinfo">Robert<br>Malmgatan 15<br>426 77  Västra Frölunda <br>Robert@gmail.com</div>
+         <!--Här har jag lagt in alla kontaktuppgifter för de olika personerna bakom företaget.-->
+      </div>
+      <div class="footer">
+      </div>
+   </body>
+</html>

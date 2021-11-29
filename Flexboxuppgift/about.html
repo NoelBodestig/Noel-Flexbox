@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<link rel="stylesheet" href="style.css">
+<html>
+   <head>
+   </head>
+   <body>
+      <div class="container">
+         <div class="item">
+            <h2 class="title"><a href="index.html">Hem</a></h2>
+         </div>
+         <div class="item">
+            <h2 class="title"><a href="products.html">Produkter</a></h2>
+         </div>
+         <div class="item">
+            <h2 class="title"><a href="contacts.html">Kontakt</a></h2>
+         </div>
+         <div class="selecteditem">
+            <h2 class="title"><a href="about.html">Om oss</a></h2>
+         </div>
+         <div class="item">
+            <h2 class="title"><a href="documentation.html">Dokumentation</a></h2>
+         </div>
+         <div>
+            <img id="cartimg" style="width:30%;" src="cart.png"><br>
+            <div id="cart">
+            </div>
+         </div>
+      </div>
+      <div class="my-container">
+         <br><br>
+         <h1> Företaget Sunglasses Shop är ett privatägt företag som består av tre personer. </h1>
+         <div class="slideshow-container">
+            <div class="mySlides fade">            
+               <img src="Robert.jpg" style="width:100%">            
+            </div>
+            <div class="mySlides fade">        
+               <img src="Dave.jpg" style="width:100%">        
+            </div>
+            <div class="mySlides fade">        
+               <img src="Larry.jpg" style="width:100%">        
+            </div>
+            <br>
+            <div style="text-align:center">
+               <span class="dot" onclick="currentSlide(1)"></span> 
+               <span class="dot" onclick="currentSlide(2)"></span> 
+               <span class="dot" onclick="currentSlide(3)"></span> 
+            </div>
+         </div>
+      </div>
+      <script>
+         var slideIndex = 1;
+         showSlides(slideIndex);
+         
+         function plusSlides(n) {
+             showSlides(slideIndex += n);
+         }
+         
+         function currentSlide(n) {
+             showSlides(slideIndex = n);
+         }
+         
+         function showSlides(n) {
+             var i;
+             var slides = document.getElementsByClassName("mySlides");
+             var dots = document.getElementsByClassName("dot");
+             if (n > slides.length) {slideIndex = 1}    
+             if (n < 1) {slideIndex = slides.length}
+             for (i = 0; i < slides.length; i++) {
+                 slides[i].style.display = "none";  
+             }
+             for (i = 0; i < dots.length; i++) {
+                 dots[i].className = dots[i].className.replace(" active", "");
+             }
+             slides[slideIndex-1].style.display = "block";  
+             dots[slideIndex-1].className += " active";
+         
+             
+         }
+         
+      </script>
+      <!--Det som jag då gjort i detta dokumentet är att jag har skapat ett bildspel där jag lagt till 
+         bilder på personerna bakom företaget och sedan fixat en variation av ett bildspel som genom
+         att trycka på de runda knapparna så byter man person. Så jag har använt dot och sedan onclick.-->
+      <div>
+         <div class="footer"></div>
+      </div>
+   </body>
+</html>

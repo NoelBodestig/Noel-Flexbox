@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<link rel="stylesheet" href="style.css">
+<html>
+   <head>
+   </head>
+   <body>
+      <div class="container">
+         <div class="item">
+            <h2 class="title"><a href="index.html">Hem</a></h2>
+         </div>
+         <div class="selecteditem">
+            <h2 class="title"><a href="products.html">Produkter</a></h2>
+         </div>
+         <div class="item">
+            <h2 class="title"><a href="contacts.html">Kontakt</a></h2>
+         </div>
+         <div class="item">
+            <h2 class="title"><a href="about.html">Om oss</a></h2>
+         </div>
+         <div class="item">
+            <h2 class="title"><a href="documentation.html">Dokumentation</a></h2>
+         </div>
+         <!--Här har jag gjort samma som på index dokumentet, enda skillnaden är att jag nu bytt färgen till products
+            för när man då trycker på produkt boxen så länkas man hit och boxen blir grön för att indikera vilken man är 
+            på.-->
+         <div>
+            <img id="cartimg" style="width:30%;" src="cart.png"><br>
+            <div id="cart">
+            </div>
+         </div>
+      </div>
+      <div>
+         <br><br>
+         <form>
+            <select class="selectimage" name="selectimage" id="selectimage" onchange="document.getElementById('imagestart').src = document.getElementById('selectimage').value;">
+               <option value="sunglasses1.jpg">sunglasses 1 [299kr]</option>
+               <option value="sunglasses2.jpg">sunglasses 2 [329kr]</option>
+               <option value="sunglasses3.jpg">sunglasses 3 [249kr]</option>
+               <option value="sunglasses4.jpg">sunglasses 4 [399kr]</option>
+               <option value="sunglasses5.jpg">sunglasses 5 [299kr]</option>
+            </select>
+         </form>
+         <br>
+         <img id="imagestart" style="width:30%" src="sunglasses1.jpg"><br>    
+         <!--Här har jag gjort en mer avancerad sak vilket är att jag lagt in produkterna man kan köpa och 
+            dess pris och sedan har jag gjort en form av drop-down meny på det så att det man trycker på
+            visas upp.-->   
+         <button class="button-19" onclick="document.getElementById('cart').innerHTML = document.getElementById('cart').innerHTML + document.getElementById('selectimage').value.replace('.jpg','') + '<br>';">Lägg i kundvagn</button>
+         <!--Det jag gjort här är att göra en knapp som är kopplad till kundvagnen så när man trycker
+            på knappen så kommer produktens namn in under kundvagnen.-->
+      </div>
+      <div class="footer">
+      </div>
+   </body>
+</html>
